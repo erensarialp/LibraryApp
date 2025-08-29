@@ -11,6 +11,8 @@ import java.util.List;
 @RequestMapping("/api/students")
 public class StudentController {
 
+
+
     private AuthController authController;
 
     public StudentController(AuthController authController) {

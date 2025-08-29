@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,7 +13,13 @@ import java.util.UUID;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    private List<Student> studentList = new ArrayList<>();
+    private List<Student> studentList = new ArrayList<>(Arrays.asList(
+            new Student(1, "Alice", "alice@example.com"),
+            new Student(2, "Bob", "bob@example.com"),
+            new Student(3, "Charlie", "charlie@example.com"),
+            new Student(4, "David", "david@example.com"),
+            new Student(5, "Eva", "eva@example.com")
+    ));
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)

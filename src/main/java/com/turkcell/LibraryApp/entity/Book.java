@@ -5,15 +5,18 @@ public class Book {
     private String title;
     private String author;
     private String role;
+    private boolean isBorrow;
+
 
     public Book() {
     }
 
-    public Book(int id, String title, String author, String role) {
+    public Book(int id, String title, String author, String role, boolean isBorrow) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.role = role;
+        this.isBorrow = isBorrow;
     }
 
     // Getter ve Setterlar
@@ -47,5 +50,13 @@ public class Book {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public boolean isBorrow() {
+        return isBorrow;
+    }
+
+    public void setBorrow(boolean borrow) {
+        isBorrow = borrow;
     }
 }
